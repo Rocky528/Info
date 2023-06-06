@@ -41,9 +41,6 @@ const UserSchema = new mongoose.Schema({
         type: Date,
         default: Date.now
     },
-    loginTime: {
-        login_time: [String]
-    },
     paymentInfo: {
         type: String,
         required: true
@@ -51,3 +48,11 @@ const UserSchema = new mongoose.Schema({
 
 })
 module.exports = mongoose.model('Users', UserSchema)
+
+// ,
+//     loginTime: {
+//         login_time: {
+//             type: Date,
+//             default: Date.now
+//         }
+//     },
