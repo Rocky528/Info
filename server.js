@@ -16,8 +16,4 @@ app.get('*', function (request, response) {
     response.sendFile(path.resolve(__dirname + '/client', 'index.html'));
 });
 app.use("/api/users", User_router);
-<<<<<<< HEAD
 app.listen(port, () => console.log("server started at 80"));
-=======
-app.listen(port, () => console.log("server started at 80"));
->>>>>>> 9189c3042343886dee27624e18fc6cb9ceae1962
