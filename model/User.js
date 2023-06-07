@@ -23,36 +23,31 @@ const UserSchema = new mongoose.Schema({
     },
     address: {
         type: String,
-        required: true
+        // required: true
     },
     state: {
         type: String,
-        required: true
+        // required: true 
     },
     country: {
         type: String,
-        required: true
+        // required: true               
     },
     producttype: {
         type: String,
-        required: true
+        // required: true
     },
     registerTime: {
         type: Date,
         default: Date.now
     },
+    loginTime: {
+        login_time: [String]
+    },
     paymentInfo: {
         type: String,
-        required: true
+        // required: true
     },
 
 })
 module.exports = mongoose.model('Users', UserSchema)
-
-// ,
-//     loginTime: {
-//         login_time: {
-//             type: Date,
-//             default: Date.now
-//         }
-//     },

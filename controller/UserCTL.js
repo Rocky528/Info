@@ -14,12 +14,12 @@ const Register = async (req, res) => {
                     lastname: req.body.lName,
                     username: req.body.uName,
                     email: req.body.eMail,
-                    address: req.body.aDdress,
-                    state: req.body.sTate,
+                    // address: req.body.aDdress,
+                    // state: req.body.sTate,
                     country: req.body.cOuntry,
                     password: hashedPassword,
-                    producttype: req.body.pRotype,
-                    paymentInfo: req.body.pAyment,
+                    // producttype: req.body.pRotype,
+                    // paymentInfo: req.body.pAyment,
                 });
                 return user.save();
             }
