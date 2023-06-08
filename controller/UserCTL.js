@@ -3,6 +3,7 @@ const bcrypt = require('bcryptjs');
 
 
 const Register = async (req, res) => {
+    console.log(req.body);
     const hashedPassword = bcrypt.hashSync(req.body.pAss);
     User.findOne({ email: req.body.eMail })
         .then(Userexisting => {
@@ -12,7 +13,7 @@ const Register = async (req, res) => {
                 const user = new User({
                     firstName: req.body.fName,
                     lastname: req.body.lName,
-                    username: req.body.uName,
+                    // username: req.body.uName,
                     email: req.body.eMail,
                     // address: req.body.aDdress,
                     // state: req.body.sTate,
