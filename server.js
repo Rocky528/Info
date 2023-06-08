@@ -10,10 +10,10 @@ app.use(cors());
 app.use(express.json());
 
 // Serve static files from the React app
-app.use(express.static(path.join(__dirname, '/build')));
+app.use(express.static(path.join(__dirname, '/frontend')));
 
 app.get('*', function (request, response) {
-    response.sendFile(path.resolve(__dirname + '/build', 'index.html'));
+    response.sendFile(path.resolve(__dirname + '/frontend', 'index.html'));
 });
 
 app.use("/api/users", User_router);
