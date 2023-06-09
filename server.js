@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const port = process.env.PORT || 80;
+const port = process.env.PORT || 8000;
 const User_router = require('./routes/User-router')
 require('./config/config(db)');
 const cors = require('cors');
@@ -16,4 +16,4 @@ app.get('*', function (request, response) {
     response.sendFile(path.resolve(__dirname + '/frontend', 'index.html'));
 });
 app.use("/api/users", User_router);
-app.listen(port, () => console.log("server started at 80"));
+app.listen(port, () => console.log("server started at 8000"));
