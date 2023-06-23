@@ -22,11 +22,13 @@ const Register = async (req, res) => {
                     // producttype: req.body.pRotype,
                     // paymentInfo: req.body.pAyment,
                 });
+                res.send(`User ${req.body.eMail} registered successfully!`);
                 return user.save();
             }
+            res.status(500).send("An error occurred while registering user!");
         })
         .then(savedUser => {
-            res.send(`User ${savedUser.email} registered successfully!`);
+            res.send(`User ${req.body.eMail} registered successfully!`);
         })
         .catch(err => {
             console.error(err);
